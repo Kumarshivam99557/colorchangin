@@ -56,6 +56,7 @@ userSchema.pre('save', async function(next){
 // comapre the password during the login
 userSchema.methods.comparePassword = async function(password){
    return  bcrypt.compare(password,this.password);
+   
 }
 
 // authentication using jsonwebtoken
